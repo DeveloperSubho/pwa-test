@@ -4,6 +4,12 @@ import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import { messaging, getToken } from "./firebase-config";
 
+const isLocalhost = window.location.hostname === "localhost";
+const swPath = isLocalhost
+  ? "/firebase-messaging-sw.js"
+  : "/pwa-test/firebase-messaging-sw.js"; // Change "pwa-test" to your GitHub Pages repo name
+
+
 // Register service worker for PWA
 serviceWorkerRegistration.register();
 
@@ -31,7 +37,7 @@ root.render(
 );
 
 navigator.serviceWorker
-  .register(`${process.env.PUBLIC_URL}/firebase-messaging-sw.js`)
+  .register(`${process.env.PUBLIC_URL}`+swPath)
   .then((registration) => {
     console.log("Service Worker registered:", registration);
   })
