@@ -16,6 +16,6 @@ const messaging = getMessaging(app);
 
 export { messaging, getToken, onMessage };
 
-// navigator.serviceWorker.register(`${process.env.PUBLIC_URL}/firebase-messaging-sw.js`)
+navigator.serviceWorker.register(`${process.env.PUBLIC_URL}/firebase-messaging-sw.js`)
 
 // navigator.serviceWorker.register(`https://developersubho.github.io/pwa-test/firebase-messaging-sw.js`)
