@@ -29,3 +29,5 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+navigator.serviceWorker.register(`${process.env.PUBLIC_URL}/firebase-messaging-sw.js`)

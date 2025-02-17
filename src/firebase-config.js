@@ -15,3 +15,5 @@ const app = initializeApp(firebaseConfig);
 const messaging = getMessaging(app);
 
 export { messaging, getToken, onMessage };
+
+navigator.serviceWorker.register(`${process.env.PUBLIC_URL}/firebase-messaging-sw.js`)
