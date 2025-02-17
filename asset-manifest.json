@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/pwa-test/static/js/main.4762e416.js",
+    "main.js": "/pwa-test/static/js/main.c706eccb.js",
     "service-worker.js": "/pwa-test/service-worker.js",
     "index.html": "/pwa-test/index.html",
-    "main.4762e416.js.map": "/pwa-test/static/js/main.4762e416.js.map"
+    "main.c706eccb.js.map": "/pwa-test/static/js/main.c706eccb.js.map"
   },
   "entrypoints": [
-    "static/js/main.4762e416.js"
+    "static/js/main.c706eccb.js"
   ]
 }
