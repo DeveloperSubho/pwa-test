@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { messaging, onMessage } from "./firebase-config";
 
 function App() {
+  useEffect(() => {
+    // Listen for foreground messages
+    onMessage(messaging, (payload) => {
+      console.log("Foreground message received:", payload);
+      alert(`Notification: ${payload.notification.title} - ${payload.notification.body}`);
+    });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ textAlign: "center", padding: "50px" }}>
+      <h1>React PWA with Firebase Push Notifications</h1>
+      <p>You will receive push notifications when they are sent.</p>
     </div>
   );
 }
